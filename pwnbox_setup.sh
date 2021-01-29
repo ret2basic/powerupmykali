@@ -126,6 +126,9 @@ sudo apt --assume-yes install nmap
 # Nikto
 sudo apt --assume-yes install nikto
 
+# php-reverse-shell.php
+wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php 
+
 # rockyou.txt
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 

@@ -8,3 +8,23 @@ $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/
 $ chmod +x pwnbox_setup.sh
 $ ./pwnbox_setup.sh
 ```
+
+Then install Oh My Zsh manually:
+
+```shell
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Edit `~/.zshrc`:
+
+```plaintext
+ZSH_THEME="agnoster"
+```
+
+Source it:
+
+```shell
+$ source ~/.zshrc
+```
+
+Take a snapshot!
