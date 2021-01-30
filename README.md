@@ -27,4 +27,6 @@ Source it:
 $ source ~/.zshrc
 ```
 
-Take a snapshot!
+Log out and log back in for the `docker` group membership to evaluate.
+
+Done! Take a snapshot!
