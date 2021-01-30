@@ -9,6 +9,8 @@ $ chmod +x pwnbox_setup.sh
 $ ./pwnbox_setup.sh
 ```
 
+**Log out and log back in for the `docker` group membership to evaluate.**
+
 Then install Oh My Zsh manually:
 
 ```shell
@@ -27,6 +29,6 @@ Source it:
 $ source ~/.zshrc
 ```
 
-Log out and log back in for the `docker` group membership to evaluate.
+
 
 Done! Take a snapshot!
