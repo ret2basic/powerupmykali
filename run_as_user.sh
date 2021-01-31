@@ -7,6 +7,10 @@
 cd
 mkdir ~/Arsenal
 
+# Set Go Path
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+source ~/.profile
+
 # Sherlock
 git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal
 python -m pip install -r ~/Arsenal/sherlock/requirements.txt
