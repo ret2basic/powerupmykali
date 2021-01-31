@@ -28,31 +28,6 @@ git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-su
 # pspy
 git clone https://github.com/DominicBreuker/pspy.git ~/Arsenal
 
-# Go
-wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
-rm go1.15.7.linux-amd64.tar.gz
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-source ~/.profile
-
-# ffuf
-go get -u github.com/ffuf/ffuf
-
-# httprobe
-go get -u github.com/tomnomnom/httprobe
-
-# assetfinder
-go get -u github.com/tomnomnom/assetfinder
-
-# waybackurls
-go get github.com/tomnomnom/waybackurls
-
-# GoWitness
-go get -u github.com/sensepost/gowitness
-
-# jsteg
-go get lukechampine.com/jsteg
-
 # ASCII art
 cat << "EOF"
 
