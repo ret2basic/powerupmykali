@@ -78,6 +78,3 @@ cat << "EOF"
 
 
 EOF
-
-# Self-deleting
-rm -- "$0"
