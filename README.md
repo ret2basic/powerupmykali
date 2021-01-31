@@ -1,5 +1,5 @@
 # CTF Pwnbox Setup Script
-These two Bash scripts automatically installs essential tools for CTF. Tested on Kali Linux 2020.4 64-Bit.
+This Bash scripts automatically installs essential tools for CTF. Tested on Kali Linux 2020.4 64-Bit.
 
 ## Usage
 
