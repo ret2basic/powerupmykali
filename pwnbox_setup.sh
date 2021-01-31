@@ -68,9 +68,9 @@ apt --assume-yes install python3 python3-pip python3-dev git libssl-dev libffi-d
 pip install --upgrade pip
 pip install --upgrade pwntools
 
-# Pwndbg
-git clone https://github.com/pwndbg/pwndbg
-./pwndbg/setup.sh
+# GDB-Peda
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 # OneGadget
 apt --assume-yes install ruby
