@@ -41,6 +41,10 @@ Source it:
 $ source ~/.zshrc
 ```
 
-
-
 Done! Take a snapshot!
+
+## To-Do
+
+- [ ] Ghidra
+- [ ] Autopwn
+- [ ] Misc tools
