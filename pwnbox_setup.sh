@@ -142,7 +142,7 @@ pip install updog
 # Switch to user
 exit
 cd
-mkdir Arsenal
+mkdir ~/Arsenal
 
 # Sherlock
 git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal
