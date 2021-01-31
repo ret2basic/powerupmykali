@@ -115,9 +115,6 @@ apt --assume-yes install libimage-exiftool-perl
 # Binwalk
 apt --assume-yes install binwalk
 
-# jsteg
-go get lukechampine.com/jsteg
-
 # zsteg
 gem install zsteg
 
