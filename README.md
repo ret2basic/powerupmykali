@@ -11,12 +11,14 @@ $ sudo su
 $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/run_as_root.sh
 $ chmod +x run_as_root.sh
 $ ./run_as_root.sh
+$ rm run_as_root.sh
 
 # Part 2
 $ exit
 $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/run_as_user.sh
 $ chmod +x run_as_user.sh
 $ ./run_as_user.sh
+$ rm run_as_user.sh
 ```
 
 **Log out and log back in for the `docker` group membership to evaluate.**
