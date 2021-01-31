@@ -1,17 +1,20 @@
 #!/bin/bash
 
-#-------------#
-# Run as root |
-#-------------#
+# Log in with kali:kali
+# Change password immediately:
+# $ passwd
 
+# Then set up root account
+# $ sudo passwd root
+# Log out and log in as root
+
+#---------#
+# Install |
+#---------#
+
+# Preparation
 cd
-
-# Update and Upgrade
 apt --assume-yes update
-apt --assume-yes upgrade
-
-# Python
-apt --assume-yes install python-is-python3
 
 # Pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -31,13 +34,6 @@ apt --assume-yes install docker-ce docker-ce-cli containerd.io
 curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-# Vim
-apt --assume-yes install vim
-
-# vimrc
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-
 # Sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 apt --assume-yes install apt-transport-https
@@ -45,20 +41,21 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.
 apt --assume-yes update
 apt --assume-yes install sublime-text
 
+# vimrc
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
 # Powerline fonts
 apt --assume-yes install fonts-powerline
-
-# Zsh
-apt --assume-yes install zsh
-
-# tmux
-apt --assume-yes install tmux
 
 # Oh My tmux
 apt --assume-yes install git
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
+
+# GDB
+apt --assume-yes install libc6-dbg gdb valgrind 
 
 # Pwntools
 apt --assume-yes update
@@ -87,23 +84,11 @@ pip install angr
 # PyCryptodome
 pip install pycryptodome
 
-# ExifTool
-apt --assume-yes install libimage-exiftool-perl
-
-# Binwalk
-apt --assume-yes install binwalk
-
 # zsteg
 gem install zsteg
 
 # Scapy
 pip install scapy
-
-# Nmap
-apt --assume-yes install nmap
-
-# Nikto
-apt --assume-yes install nikto
 
 # Updog
 pip install updog
@@ -132,6 +117,29 @@ go get -u github.com/sensepost/gowitness
 
 # jsteg
 go get lukechampine.com/jsteg
+
+#---------#
+# Arsenal |
+#---------#
+
+mkdir ~/Arsenal
+
+# Sherlock
+git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal
+python -m pip install -r ~/Arsenal/sherlock/requirements.txt
+
+# php-reverse-shell.php
+mkdir ~/Arsenal/php-reverse-shell
+wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php -O ~/Arsenal/php-reverse-shell.php
+
+# SecLists
+apt --asumme-yes -y install seclists
+
+# WinPEAS and LinPEAS
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ~/Arsenal
+
+# pspy
+git clone https://github.com/DominicBreuker/pspy.git ~/Arsenal
 
 # ASCII art
 cat << "EOF"
