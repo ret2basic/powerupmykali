@@ -1,11 +1,9 @@
 #!/bin/bash
 
-#-----------------#
-# Install as root |
-#-----------------#
+#-------------#
+# Run as root |
+#-------------#
 
-# Switch to root
-sudo su
 cd
 
 # Update and Upgrade
@@ -134,36 +132,6 @@ apt --assume-yes install nikto
 
 # Updog
 pip install updog
-
-#------------------#
-# Download as user |
-#------------------#
-
-# Switch to user
-exit
-cd
-mkdir ~/Arsenal
-
-# Sherlock
-git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal
-python -m pip install -r ~/Arsenal/sherlock/requirements.txt
-
-# php-reverse-shell.php
-mkdir ~/Arsenal/php-reverse-shell
-wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php -O ~/Arsenal/php-reverse-shell.php
-
-# rockyou.txt
-mkdir ~/Arsenal/rockyou
-wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt -O ~/Arsenal/rockyou/rockyou.txt
-
-# SecLists
-git clone https://github.com/danielmiessler/SecLists.git ~/Arsenal
-
-# WinPEAS and LinPEAS
-git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ~/Arsenal
-
-# pspy
-git clone https://github.com/DominicBreuker/pspy.git ~/Arsenal
 
 # ASCII art
 cat << "EOF"
