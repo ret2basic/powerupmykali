@@ -99,6 +99,11 @@ tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
 rm go1.15.7.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile
+echo -e "\n" >> ~/.zshrc
+echo 'export GOPATH=$HOME/go' >> ~/.zshrc
+echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.zshrc
+source ~/.zshrc
 
 # ffuf
 go get -u github.com/ffuf/ffuf
@@ -126,11 +131,7 @@ mkdir ~/Arsenal
 
 # Sherlock
 git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal/sherlock
-<<<<<<< HEAD
 python3 -m pip install -r ~/Arsenal/sherlock/requirements.txt
-=======
-python -m pip install -r ~/Arsenal/sherlock/requirements.txt
->>>>>>> 9454462dc25e0d025b5e89692629f20059e0e443
 
 # SecLists
 apt --asumme-yes -y install seclists
