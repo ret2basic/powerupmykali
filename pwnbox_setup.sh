@@ -18,17 +18,17 @@ apt --assume-yes update
 
 # Pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
+python3 get-pip.py
 rm get-pip.py
 
 # Docker
 apt --assume-yes update
-apt --assume-yes install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-apt-key fingerprint 0EBFCD88
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-apt-get update
+apt --assume-yes -y install curl gnupg2 apt-transport-https software-properties-common ca-certificates
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" | tee  /etc/apt/sources.list.d/docker.list
+apt --assume-yes update
 apt --assume-yes install docker-ce docker-ce-cli containerd.io
+usermod -aG docker $USER
 
 # Docker Compose
 curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -60,8 +60,8 @@ apt --assume-yes install libc6-dbg gdb valgrind
 # Pwntools
 apt --assume-yes update
 apt --assume-yes install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
-pip install --upgrade pip
-pip install --upgrade pwntools
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pwntools
 
 # GDB-Peda
 git clone https://github.com/longld/peda.git ~/peda
@@ -97,8 +97,8 @@ pip install updog
 wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
 rm go1.15.7.linux-amd64.tar.gz
-echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
-source /etc/profile
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+source ~/.profile
 
 # ffuf
 go get -u github.com/ffuf/ffuf
@@ -125,21 +125,17 @@ go get lukechampine.com/jsteg
 mkdir ~/Arsenal
 
 # Sherlock
-git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal
-python -m pip install -r ~/Arsenal/sherlock/requirements.txt
-
-# php-reverse-shell.php
-mkdir ~/Arsenal/php-reverse-shell
-wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php -O ~/Arsenal/php-reverse-shell.php
+git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal/sherlock
+python3 -m pip install -r ~/Arsenal/sherlock/requirements.txt
 
 # SecLists
 apt --asumme-yes -y install seclists
 
 # WinPEAS and LinPEAS
-git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ~/Arsenal
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ~/Arsenal/PEAS
 
 # pspy
-git clone https://github.com/DominicBreuker/pspy.git ~/Arsenal
+git clone https://github.com/DominicBreuker/pspy.git ~/Arsenal/pspy
 
 # ASCII art
 cat << "EOF"
