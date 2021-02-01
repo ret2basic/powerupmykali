@@ -136,6 +136,9 @@ mkdir ~/Arsenal
 git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal/sherlock
 python3 -m pip install -r ~/Arsenal/sherlock/requirements.txt
 
+# Unzip rockyou.txt
+gunzip /usr/share/wordlists/rockyou.txt.gz
+
 # SecLists
 apt --asumme-yes -y install seclists
 
