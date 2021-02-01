@@ -126,7 +126,11 @@ mkdir ~/Arsenal
 
 # Sherlock
 git clone https://github.com/sherlock-project/sherlock.git ~/Arsenal/sherlock
+<<<<<<< HEAD
 python3 -m pip install -r ~/Arsenal/sherlock/requirements.txt
+=======
+python -m pip install -r ~/Arsenal/sherlock/requirements.txt
+>>>>>>> 9454462dc25e0d025b5e89692629f20059e0e443
 
 # SecLists
 apt --asumme-yes -y install seclists

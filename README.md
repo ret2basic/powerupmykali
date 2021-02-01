@@ -7,8 +7,8 @@ Install as root:
 
 ```shell
 # wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/pwnbox_setup.sh
-# chmod +x run_as_root.sh
-# ./run_as_root.sh
+# chmod +x pwnbox_setup.sh
+# ./pwnbox_setup.sh
 ```
 
 Done. Take a snapshot!
