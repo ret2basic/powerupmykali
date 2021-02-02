@@ -3,7 +3,19 @@ This Bash scripts automatically installs essential tools for CTF. Tested on Kali
 
 ## Usage
 
-Run the script as root:
+Log in with `kali:kali` and change password immediately:
+
+```shell
+$ passwd
+```
+
+Then set up the root account:
+
+```shell
+$ sudo passwd root
+```
+
+Log out and log in as root, and then run this script:
 
 ```shell
 $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/pwnbox_setup.sh
