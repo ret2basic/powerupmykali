@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Log in with kali:kali
+# Log in with `kali:kali`
 # Change password immediately:
 # $ passwd
 
-# Then set up root account
+# Then set up the root account
 # $ sudo passwd root
 # Log out and log in as root
 
