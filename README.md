@@ -3,19 +3,15 @@ This Bash scripts automatically installs essential tools for CTF. Tested on Kali
 
 ## Usage
 
-Log in with `kali:kali` and change password immediately:
+Run [pimpmykali](https://github.com/Dewalt-arch/pimpmykali):
 
 ```shell
-$ passwd
+$ wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/master/pimpmykali.sh
+$ chmod +x pimpmykali.sh
+$ ./pimpmykali.sh
 ```
 
-Then set up the root account:
-
-```shell
-$ sudo passwd root
-```
-
-Log out and log in as root, and then run this script:
+Press `N` and wait until it is completed. Then run my setup script:
 
 ```shell
 $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/pwnbox_setup.sh
