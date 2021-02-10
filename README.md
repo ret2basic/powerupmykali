@@ -17,7 +17,6 @@ Press `N` and wait until it is completed. Then run my setup script:
 $ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/pwnbox_setup.sh
 $ chmod +x pwnbox_setup.sh
 $ ./pwnbox_setup.sh
-$ rm pwnbox_setup.sh
 ```
 
 Done. Take a snapshot!
