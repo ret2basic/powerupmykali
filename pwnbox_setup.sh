@@ -67,7 +67,9 @@ python3 -m pip install --upgrade pwntools
 
 # Pwndbg
 git clone https://github.com/pwndbg/pwndbg
-~/pwndbg/setup.sh
+cd pwndbg
+./setup.sh
+cd
 
 # OneGadget
 apt --assume-yes install ruby
