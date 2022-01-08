@@ -1,5 +1,6 @@
-# CTF Pwnbox Setup
-Install essential tools for CTF. Tested on Kali Linux 2020.4 64-Bit.
+# Kali Linux Setup
+
+This script installs essential tools on a brand new Kali Linux VM. It was tested on Kali Linux 2021.4a 64-Bit.
 
 ## Usage
 
@@ -11,18 +12,12 @@ $ chmod +x pimpmykali.sh
 $ ./pimpmykali.sh
 ```
 
-Press `N` and wait until it is completed. Then run my setup script:
+Press `N` and follow the prompts. When the installation is completed, run my setup script:
 
 ```shell
-$ wget https://raw.githubusercontent.com/ret2basic/CTF-Pwnbox-Setup-Script/main/pwnbox_setup.sh
-$ chmod +x pwnbox_setup.sh
+$ https://raw.githubusercontent.com/ret2basic/Kali-Linux-Setup/main/pwnbox_setup.sh
+$ chmod +x setup.sh
 $ ./pwnbox_setup.sh
 ```
 
-Done. Take a snapshot!
-
-## To-Do
-
-- [ ] Ghidra
-- [ ] Autopwn
-- [ ] Misc tools
+Done. Take a snapshot of your VM!
