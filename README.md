@@ -1,4 +1,4 @@
-# Kali Linux Setup
+# powerupmykali
 
 This script installs essential tools on a brand new Kali Linux VM. It was tested on Kali Linux 2021.4a 64-Bit.
 
