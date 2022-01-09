@@ -99,6 +99,10 @@ pip3 install scapy
 # Updog
 pip3 install updog
 
+# Java
+apt update -y
+apt install -y default-jdk
+
 # Go
 wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
