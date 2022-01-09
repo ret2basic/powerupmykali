@@ -26,6 +26,12 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 rm get-pip.py
 
+# Dropbox
+apt install -y libpangox-1.0-0
+wget https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+dpkg -i dropbox_2020.03.04_amd64.deb
+rm dropbox_2020.03.04_amd64.deb
+
 # Docker
 apt update -y
 apt install -y curl gnupg2 apt-transport-https software-properties-common ca-certificates
