@@ -13,13 +13,13 @@
 
 # Preparation
 cd
-apt -y update && apt -y upgrade
+apt update -y && apt upgrade -y
 
 # Terminator
-apt -y install terminator
+apt install -y terminator
 
 # Nautilus
-apt -y install nautilus
+apt install -y nautilus
 
 # Pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -27,12 +27,12 @@ python3 get-pip.py
 rm get-pip.py
 
 # Docker
-apt -y update
-apt -y install curl gnupg2 apt-transport-https software-properties-common ca-certificates
+apt update -y
+apt install -y curl gnupg2 apt-transport-https software-properties-common ca-certificates
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" | tee  /etc/apt/sources.list.d/docker.list
-apt -y update
-apt -y install docker-ce docker-ce-cli containerd.io
+apt update -y
+apt install -y docker-ce docker-ce-cli containerd.io
 
 # Docker Compose
 curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -40,30 +40,30 @@ chmod +x /usr/local/bin/docker-compose
 
 # Sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
-apt -y install apt-transport-https
+apt install -y apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
-apt -y update
-apt -y install sublime-text
+apt update -y
+apt install -y sublime-text
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Powerline fonts
-apt -y install fonts-powerline
+apt install -y fonts-powerline
 
 # Oh My tmux
-apt -y install git
+apt install -y git
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
 # GDB
-apt -y install libc6-dbg gdb valgrind 
+apt install -y libc6-dbg gdb valgrind 
 
 # Pwntools
-apt -y update
-apt -y install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+apt update -y
+apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 pip3 install --upgrade pip
 pip3 install 'pwntools>=4.7.0b0'
 
@@ -74,35 +74,35 @@ cd pwndbg
 cd
 
 # OneGadget
-apt -y install ruby
+apt install -y ruby
 gem install one_gadget
 
 # GCC Multilib
-apt -y install gcc-multilib
+apt install -y gcc-multilib
 
 # Z3
-pip install z3-solver
+pip3 install z3-solver
 
 # angr
 apt -y install python3-dev libffi-dev build-essential virtualenvwrapper
-pip install angr
+pip3 install angr
 
 # PyCryptodome
-pip install pycryptodome
+pip3 install pycryptodome
 
 # zsteg
 gem install zsteg
 
 # Scapy
-pip install scapy
+pip3 install scapy
 
 # Updog
-pip install updog
+pip3 install updog
 
 # Go
-wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
-rm go1.15.7.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
+rm go1.17.6.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile
 echo -e "\n" >> ~/.zshrc
@@ -143,7 +143,7 @@ python3 -m pip install -r ~/Arsenal/sherlock/requirements.txt
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
 # SecLists
-apt -y install seclists
+apt install -y seclists
 
 # WinPEAS and LinPEAS
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ~/Arsenal/PEAS
