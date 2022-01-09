@@ -12,7 +12,7 @@ $ chmod +x pimpmykali.sh
 $ ./pimpmykali.sh
 ```
 
-Press `N` and follow the prompts. When the installation is completed, run my setup script:
+Press `N` and follow the prompts. When the installation is completed, run powerupmykali:
 
 ```shell
 $ https://raw.githubusercontent.com/ret2basic/Kali-Linux-Setup/main/pwnbox_setup.sh
