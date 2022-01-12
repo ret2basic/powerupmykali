@@ -55,15 +55,6 @@ apt install -y sublime-text
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
-# Powerline fonts
-apt install -y fonts-powerline
-
-# Oh My tmux
-apt install -y git
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
-
 # GDB
 apt install -y libc6-dbg gdb valgrind 
 
@@ -108,6 +99,9 @@ pip3 install updog
 # Java
 apt update -y
 apt install -y default-jdk
+
+# Gobuster
+apt install -y gobuster
 
 # Go
 wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
