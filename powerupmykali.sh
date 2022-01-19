@@ -13,7 +13,7 @@
 
 # Preparation
 cd
-apt update -y && apt upgrade -y
+apt update -y && apt full-upgrade -y
 
 # Terminator
 apt install -y terminator
