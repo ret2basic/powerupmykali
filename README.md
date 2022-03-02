@@ -4,20 +4,18 @@ This script installs essential tools on a brand new Kali Linux VM. It was tested
 
 ## Usage
 
-Run [pimpmykali](https://github.com/Dewalt-arch/pimpmykali):
+Run [pimpmykali](https://github.com/Dewalt-arch/pimpmykali) first:
 
 ```shell
 $ wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/master/pimpmykali.sh
-$ chmod +x pimpmykali.sh
-$ ./pimpmykali.sh
+$ chmod +x pimpmykali.sh ; ./pimpmykali.sh
 ```
 
 Press `N` and follow the prompts. When the installation is completed, run powerupmykali:
 
 ```shell
-$ https://raw.githubusercontent.com/ret2basic/Kali-Linux-Setup/main/pwnbox_setup.sh
-$ chmod +x setup.sh
-$ ./pwnbox_setup.sh
+$ wget https://raw.githubusercontent.com/ret2basic/powerupmykali/main/powerupmykali.sh
+$ chmod +x powerupmykali.sh ; ./powerupmykali.sh
 ```
 
 Done. Take a snapshot of your VM!
