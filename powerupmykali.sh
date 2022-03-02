@@ -109,22 +109,22 @@ echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
 
 # ffuf
-go install github.com/ffuf/ffuf
+go install github.com/ffuf/ffuf@latest
 
 # httprobe
-go install github.com/tomnomnom/httprobe
+go install github.com/tomnomnom/httprobe@latest
 
 # assetfinder
-go install github.com/tomnomnom/assetfinder
+go install github.com/tomnomnom/assetfinder@latest
 
 # waybackurls
-go install github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 
 # GoWitness
-go install github.com/sensepost/gowitness
+go install github.com/sensepost/gowitness@latest
 
 # jsteg
-go install lukechampine.com/jsteg
+go install lukechampine.com/jsteg@latest
 
 #---------#
 # Arsenal |
