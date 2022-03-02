@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Log in with `kali:kali`
-# Change password immediately:
-# $ passwd
-
-# Then install pipmykali
-# https://github.com/Dewalt-arch/pimpmykali
-
 #---------#
 # Install |
 #---------#
